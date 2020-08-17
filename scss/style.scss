@@ -18,37 +18,22 @@ html {
 .column {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .layout {
   display: grid;
   grid-template-columns: auto;
   grid-auto-flow: column;
-  box-sizing: border-box;
   width: 100vw;
   height: 50vw;
-  /*
-  .column:nth-child(10) {
-
-    .text {
-      font-size: 10vw;
-      z-index: 1;
-      position: absolute;
-      text-align: center;
-      line-height: 5em;
-      height: 100%;
-      width: 100%;
-    }
-    width: 1000px;
-  }
-  */
 }
 
 .column {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  clip-path: ellipse(50% 50% at center);
+  /* clip-path: ellipse(50% 50% at center);*/
   position: relative;
   .text {
     font-size: 2vw;
@@ -58,6 +43,9 @@ html {
     height: 100%;
     width: 100%;
     transform: translateY(50%);
+  }
+  img {
+    transform: scale(500, 1);
   }
 }
 /*
