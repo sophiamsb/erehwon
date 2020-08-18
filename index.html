@@ -424,88 +424,17 @@
       </section>
     </div>
   </body>
-  <!--
-  <script>
-      
-      $(document).ready(function () {
-        $(".column").hover(
-          function () {
-            $(this).prev().css("display", "none");
-          },
-          function () {
-            $("div").removeClass("expanded");
-            $(this).css("width", "2px");
-          }
-        );
-      });
-     
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $(".column").animate(
-        function () {
-          $(this).css("width", "48%");
-          $(this).prevAll("section").css("width", " 1%");
-          $(this).prevAll("section").css("left", " -5%");
-        },
-        function () {
-          $(this).css("width", "2%");
-          $(this).prevAll("section").css("width", " 2%");
-          $(this).prevAll("section").css("left", " 0%");
-        }
-      );
-    });
-  </script>
-
-
-  <script>
-    $(".column").hover(function () {
-      $(this).toggleClass("expand");
-      $(".column").not(this).toggleClass("shrink");
-    });
-  </script>
- 
-
-  <script>
-    $(".column").hover(function () {
-      $(this).toggleClass("expand");
-      $(".column").not(this).toggleClass("shrink");
-    });
-  </script>
-   -->
-  <!-- 
-  <script type="text/javascript">
-    $("section").each(function (index) {
-      console.log(index + ": " + $(this).text());
-    });
-
-    $(function () {
-      $(".layout > section").each(
-        function () {
-          var $this = $(this);
-          $this.stop().animate({ width: "90vw" }, 500);
-        },
-        function () {
-          var $this = $(this);
-          $this.stop().animate({ width: "100%" }, 1000);
-        }
-      );
-    });
-  </script>
-  -->
-
   <script type="text/javascript">
     var column = $(".column");
     current = 0;
 
     Rotator();
     function Rotator() {
-      $(column[current]).animate({ width: "90vw" }, 7000);
+      $(column[current]).animate({ width: "95vw" }, 5000);
       $(column[current]).queue(function () {
         current = current < column.length - 1 ? current + 1 : 0;
         Rotator();
-        $(this).dequeue().animate({ width: "100%" }, -5000);
+        $(this).dequeue().animate({ width: "toggle" }, 5000);
       });
     }
   </script>
