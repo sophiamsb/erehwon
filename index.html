@@ -203,7 +203,9 @@
       </section>
       <!-- 25-->
       <section class="column">
-        <div class="text"></div>
+        <div class="text">
+          This will be on <strong style="color: red;">Youtube</strong>
+        </div>
         <img src="./img/img_26.jpg" alt="" />
       </section>
       <!-- 26-->
@@ -243,6 +245,11 @@
       </section>
       <!-- 31-->
       <section class="column">
+        <div class="text">
+          I seat at my desk and look at stuff online
+          <br />
+          It's mostly what I do"
+        </div>
         <img src="./other/img_02.gif" alt="" />
         <img src="./img/img_32.jpg" alt="" />
       </section>
@@ -303,6 +310,11 @@
       </section>
       <!-- 39-->
       <section class="column">
+        <div class="text">
+          about internet anger:
+          <br />
+          😡 🤬🖕🖕🖕🖕 😈
+        </div>
         <img src="./img/img_41.jpg" alt="" />
       </section>
       <!-- 40-->
@@ -462,10 +474,14 @@
     });
   </script>
    -->
-
+  <!-- 
   <script type="text/javascript">
+    $("section").each(function (index) {
+      console.log(index + ": " + $(this).text());
+    });
+
     $(function () {
-      $(".layout > section").hover(
+      $(".layout > section").each(
         function () {
           var $this = $(this);
           $this.stop().animate({ width: "90vw" }, 500);
@@ -476,5 +492,21 @@
         }
       );
     });
+  </script>
+  -->
+
+  <script type="text/javascript">
+    var column = $(".column");
+    current = 0;
+
+    Rotator();
+    function Rotator() {
+      $(column[current]).animate({ width: "90vw" }, 7000);
+      $(column[current]).queue(function () {
+        current = current < column.length - 1 ? current + 1 : 0;
+        Rotator();
+        $(this).dequeue().animate({ width: "100%" }, -5000);
+      });
+    }
   </script>
 </html>
