@@ -63,9 +63,8 @@ html {
     transform: translateY(100%);
   }
 }
-
-.column:hover {
-  width: 95vw;
+.column:first-child {
+  width: 50vw;
 }
 
 .title {
