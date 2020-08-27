@@ -31,7 +31,7 @@ html {
   overflow: hidden;
   position: relative;
   max-height: 100vh;
-  width: 1%;
+  width: 10%;
 
   .text {
     font-size: 2vw;
@@ -41,6 +41,15 @@ html {
     height: 100%;
     width: 100%;
     transform: translateY(50%);
+  }
+  .text2 {
+    font-size: 2vw;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    transform: translateY(0%);
   }
 }
 .image {
@@ -61,13 +70,14 @@ html {
     transform: translateY(100%);
   }
 }
-
+/*
 .column:hover {
-  width: 100%;
+  width: 1000%;
 }
+*/
 
 .column:first-child {
-  width: 100%;
+  width: 500%;
 }
 
 .banner {
@@ -79,12 +89,13 @@ html {
   margin-top: 0.3em;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 
 button {
   border: none;
   outline: inherit;
-  background-color: rgba(226, 27, 27, 0.342);
+  background-color: rgba(226, 27, 27, 0.465);
   width: 120px;
   border-radius: 30px;
   font-size: 12px;
