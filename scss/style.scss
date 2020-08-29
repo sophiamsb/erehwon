@@ -1,8 +1,16 @@
+@import "text";
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   position: relative;
+}
+html {
+  --size-big: 5rem;
+  --size-normal: 2.5rem;
+  --size-small: 1.6rem;
+  --times: "Times New Roman", Times, serif;
+  --arial: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
 
 body,
@@ -11,75 +19,10 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: var(--times);
 }
 
-.layout,
-.column {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#layout {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-}
-
-.column {
-  overflow: hidden;
-  position: relative;
-  max-height: 100vh;
-  width: 10%;
-
-  .text {
-    font-size: 2vw;
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    transform: translateY(50%);
-  }
-  .text2 {
-    font-size: 2vw;
-    z-index: 1;
-    position: absolute;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    transform: translateY(0%);
-  }
-}
-.image {
-  height: 100%;
-  width: 100%;
-  img {
-    transform: scale(-500, 1);
-  }
-}
-.other {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  img {
-    display: block;
-    margin: 0 auto;
-    transform: translateY(100%);
-  }
-}
-/*
-.column:hover {
-  width: 1000%;
-}
-*/
-
-.column:first-child {
-  width: 500%;
-}
-
+/*---NAV---*/
 .banner {
   width: 15vw;
   font-size: 5vw;
@@ -106,4 +49,52 @@ button {
   transition: 1s ease;
   cursor: pointer;
   color: rgb(43, 255, 43);
+}
+
+/*---GRID---*/
+.layout,
+.column {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.column {
+  overflow: hidden;
+  position: relative;
+  max-height: 100vh;
+  width: 10%;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  img {
+    transform: scale(-500, 1);
+  }
+}
+.other {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  img {
+    display: block;
+    margin: 0 auto;
+    transform: translateY(100%);
+  }
+}
+
+.column:hover {
+  width: 1000%;
+}
+
+.column:first-child {
+  width: 100%;
 }
