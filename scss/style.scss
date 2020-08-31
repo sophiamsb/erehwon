@@ -33,6 +33,7 @@ html {
   margin-top: 0.3em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 2;
 }
 
@@ -52,6 +53,18 @@ button {
   color: rgb(43, 255, 43);
 }
 
+a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(43, 255, 43);
+  border: 1px solid rgb(43, 255, 43);
+  background-color: rgba(226, 27, 27, 0.465);
+  line-height: 40px;
+}
 /*---GRID---*/
 .layout,
 .column {
