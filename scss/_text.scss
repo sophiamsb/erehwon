@@ -2,8 +2,14 @@
 .arial {
   font-family: var(--arial);
 }
-.margin {
+.margin-left {
+  margin-left: 2em;
+}
+.margin-bottom {
   margin-bottom: 2em;
+}
+.margin-top {
+  margin-top: 3.5em;
 }
 .padding-top {
   padding-top: 4em;
@@ -48,6 +54,12 @@
 .sideways-rl {
   writing-mode: sideways-rl;
   right: 0;
+  position: relative;
+}
+
+/*--- CENTER ---*/
+.vertical-rl-center {
+  writing-mode: vertical-rl;
   position: relative;
 }
 
@@ -146,6 +158,71 @@
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 .shadow-yellow {
-  color: yellow;
+  color: #ffff00;
   text-shadow: 2px 2px 4px #000000;
+}
+
+/* BANNER */
+
+.circle {
+  width: fit-content;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.589);
+  border-radius: 100%;
+  padding: 1em;
+}
+
+.dashed {
+  width: fit-content;
+  height: fit-content;
+  border: 3px dashed black;
+  padding: 0.5em;
+  background: yellow;
+}
+
+/* STRABURST */
+.square {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+
+.square2 {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 255, 0.253);
+  top: 20%;
+  left: 25%;
+
+  p {
+    width: 100%;
+    height: fit-content;
+    background: rgba(0, 128, 0, 0.301);
+  }
+}
+
+svg {
+  position: absolute;
+  z-index: -1;
+  -webkit-animation: rotation 30s infinite;
+  animation: rotation 30s infinite;
+  width: 70%;
+}
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
