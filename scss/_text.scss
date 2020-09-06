@@ -11,6 +11,9 @@
 .margin-top {
   margin-top: 3.5em;
 }
+.margin-top2 {
+  margin-top: 1.5em;
+}
 .padding-top {
   padding-top: 4em;
 }
@@ -162,6 +165,14 @@
   text-shadow: 2px 2px 4px #000000;
 }
 
+.transparent {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
 /* BANNER */
 
 .circle {
@@ -178,51 +189,5 @@
   border: 3px dashed black;
   padding: 0.5em;
   background: yellow;
-}
-
-/* STRABURST */
-.square {
-  position: relative;
-  height: 200px;
-  width: 200px;
-}
-
-.square2 {
-  position: absolute;
-  height: 120px;
-  width: 100%;
   text-align: center;
-  background: rgba(0, 0, 255, 0.253);
-  top: 20%;
-  left: 25%;
-
-  p {
-    width: 100%;
-    height: fit-content;
-    background: rgba(0, 128, 0, 0.301);
-  }
-}
-
-svg {
-  position: absolute;
-  z-index: -1;
-  -webkit-animation: rotation 30s infinite;
-  animation: rotation 30s infinite;
-  width: 70%;
-}
-@-webkit-keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
