@@ -35,6 +35,10 @@
 .small {
   font-size: var(--size-small);
 }
+.title {
+  font-size: var(--size-title);
+  line-height: 200px;
+}
 
 /*--- LEFT ---*/
 .vertical-lr {
@@ -165,7 +169,7 @@
   text-shadow: 2px 2px 4px #000000;
 }
 
-.transparent {
+.black-blue {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
@@ -183,6 +187,14 @@
   padding: 1em;
 }
 
+.circle-green {
+  width: fit-content;
+  height: fit-content;
+  background: rgb(175, 255, 195);
+  color: rgb(0, 255, 64);
+  border-radius: 100%;
+  padding: 1em;
+}
 .dashed {
   width: fit-content;
   height: fit-content;
