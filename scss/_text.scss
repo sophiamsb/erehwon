@@ -35,35 +35,18 @@
 .small {
   font-size: var(--size-small);
 }
-.title {
-  font-size: var(--size-title);
-  line-height: 200px;
-}
-
 /*--- LEFT ---*/
 .vertical-lr {
   writing-mode: vertical-lr;
   left: 0;
   position: relative;
 }
-.sideways-lr {
-  writing-mode: sideways-lr;
-  left: 0;
-  position: relative;
-}
-
 /*--- RIGHT ---*/
 .vertical-rl {
   writing-mode: vertical-rl;
   right: 0;
   position: relative;
 }
-.sideways-rl {
-  writing-mode: sideways-rl;
-  right: 0;
-  position: relative;
-}
-
 /*--- CENTER ---*/
 .vertical-rl-center {
   writing-mode: vertical-rl;
@@ -71,7 +54,6 @@
 }
 
 /* ORIENTATION */
-
 .upright {
   text-orientation: upright;
 }
@@ -80,6 +62,7 @@
   transform: rotate(90deg);
 }
 
+/* CANVAS */
 .header {
   z-index: 1;
   position: absolute;
@@ -137,7 +120,6 @@
 }
 
 /* STYLE */
-
 .red {
   color: red;
   -webkit-text-stroke-width: 1px;
@@ -164,10 +146,6 @@
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
-.shadow-yellow {
-  color: #ffff00;
-  text-shadow: 2px 2px 4px #000000;
-}
 
 .black-blue {
   background-clip: text;
@@ -190,16 +168,8 @@
 .circle-green {
   width: fit-content;
   height: fit-content;
-  background: rgb(175, 255, 195);
+  background: rgba(175, 255, 195, 0.376);
   color: rgb(0, 255, 64);
   border-radius: 100%;
   padding: 1em;
-}
-.dashed {
-  width: fit-content;
-  height: fit-content;
-  border: 3px dashed black;
-  padding: 0.5em;
-  background: yellow;
-  text-align: center;
 }

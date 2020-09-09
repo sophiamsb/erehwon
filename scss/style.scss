@@ -23,10 +23,9 @@ html {
   padding: 0;
   font-family: var(--times);
 }
-
 /*---NAV---*/
 .banner {
-  width: 15vw;
+  width: 13vw;
   font-size: 5vw;
   position: fixed;
   z-index: 1;
@@ -114,5 +113,5 @@ a {
 }
 
 .column:first-child {
-  width: 50%;
+  width: 15%;
 }
