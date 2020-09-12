@@ -1,0 +1,41 @@
+@media only screen and (max-width: 700px) {
+  html {
+    --size-big: 3.8rem !important;
+    --size-normal: 1.5rem !important;
+    --size-medium: 0.9rem !important;
+    --size-small: 0.6rem !important;
+    --times: "Times New Roman", Times, serif;
+    --arial: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  }
+  .image {
+    height: 100%;
+    width: 100%;
+    img {
+      transform: scale(-500, 1);
+    }
+  }
+  .other {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    img {
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px !important;
+    }
+  }
+
+  /* SETTINGS */
+  .letter-spacing {
+    letter-spacing: 19px;
+    padding-left: 20px;
+  }
+  .margin-top {
+    margin-top: 2.5em;
+  }
+}
