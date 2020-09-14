@@ -21,10 +21,7 @@
   letter-spacing: 35px;
   padding-left: 37px;
 }
-.flex {
-  display: flex;
-  justify-content: space-around;
-}
+
 /* SIZE */
 .big {
   font-size: var(--size-big);
@@ -128,6 +125,17 @@
   left: 75%;
   top: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
