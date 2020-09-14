@@ -21,7 +21,10 @@
   letter-spacing: 35px;
   padding-left: 37px;
 }
-
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
 /* SIZE */
 .big {
   font-size: var(--size-big);
