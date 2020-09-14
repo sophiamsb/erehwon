@@ -97,6 +97,9 @@ a {
   height: 100vh;
   width: 100%;
   object-fit: cover;
+  img {
+    height: 100%;
+  }
 }
 .other {
   height: 100%;
@@ -111,6 +114,10 @@ a {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.column:hover {
+  width: 1000%;
 }
 
 .column:first-child {
