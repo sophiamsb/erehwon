@@ -1,33 +1,34 @@
-var column = $(".column");
-current = 0;
-function Rotator() {
-  $(column[current]).animate({ width: "1000%" }, 8000);
-  $(column[current]).queue(function () {
-    current = current < column.length - 1 ? current + 1 : 0;
-    Rotator();
-    $(this).dequeue().animate({ width: "10%" }, 8000);
-  });
-}
+var TRANSITION_DURATION_MS = 2500;
+var EXPANDED_WIDTH = "1000%";
+var COLLAPSED_WIDTH = "10%";
 
+var columns = $(".column");
+var currentIndex = 0;
 var playing = false;
 var pauseButton = document.getElementById("pause");
 pauseButton.style.display = "block";
 
+function rotate() {
+  var previousIndex = currentIndex;
+  currentIndex = currentIndex < columns.length - 1 ? currentIndex + 1 : 0;
+  $(columns[previousIndex]).animate({ width: COLLAPSED_WIDTH }, TRANSITION_DURATION_MS);
+  $(columns[currentIndex]).animate({ width: EXPANDED_WIDTH }, TRANSITION_DURATION_MS, function () {
+    if (playing) rotate();
+  });
+}
+
 function playSlideshow() {
   pauseButton.innerHTML = "Pause";
   playing = true;
-  $(column[current]).animate({ width: "1000%" }, 8000);
-  $(column[current]).queue(function () {
-    current = current < column.length - 1 ? current + 1 : 0;
-    Rotator();
-    $(this).dequeue().animate({ width: "10%" }, 8000);
+  $(columns[currentIndex]).animate({ width: EXPANDED_WIDTH }, TRANSITION_DURATION_MS, function () {
+    if (playing) rotate();
   });
 }
 
 function pauseSlideshow() {
   pauseButton.innerHTML = "Play";
   playing = false;
-  $(column[current]).stop(true);
+  columns.stop(true, false);
 }
 
 pauseButton.onclick = function () {
